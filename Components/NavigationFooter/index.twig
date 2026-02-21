@@ -1,12 +1,63 @@
 <flynt-component name="NavigationFooter">
-  <div class="container">
-    {% if menu %}
-      <nav class="navigation" aria-label="{{ labels.ariaLabel }}">
-        {% include 'Partials/_menu.twig' with {'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel} only %}
-      </nav>
-    {% endif %}
-    {% if contentHtml %}
-      <div class="content">{{ contentHtml|e('wp_kses_post') }}</div>
-    {% endif %}
-  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">♪</div>
+            StringMaster
+          </a>
+          <p>The modern way to learn guitar. Interactive lessons, real-time feedback, and a supportive community.</p>
+        </div>
+
+        {% set footer_nav = [
+          {
+            title: 'Product',
+            links: [
+              { label: 'Features',     url: '#' },
+              { label: 'Pricing',      url: '#' },
+              { label: 'Song Library', url: '#' },
+              { label: 'Mobile App',   url: '#' },
+            ],
+          },
+          {
+            title: 'Company',
+            links: [
+              { label: 'About Us', url: '#' },
+              { label: 'Careers',  url: '#' },
+              { label: 'Blog',     url: '#' },
+              { label: 'Contact',  url: '#' },
+            ],
+          },
+          {
+            title: 'Support',
+            links: [
+              { label: 'Help Center',      url: '#' },
+              { label: 'Community',        url: '#' },
+              { label: 'Terms of Service', url: '#' },
+              { label: 'Privacy Policy',   url: '#' },
+            ],
+          },
+        ] %}
+
+        {% for column in footer_nav %}
+          <div>
+            <h4 class="footer-title">{{ column.title }}</h4>
+            <ul class="footer-links">
+              {% for link in column.links %}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 StringMaster. All rights reserved.</span>
+        <span>Developed by <a href="https://www.templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a></span>
+      </div>
+    </div>
+  </footer>
 </flynt-component>

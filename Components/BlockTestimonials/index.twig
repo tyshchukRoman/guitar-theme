@@ -1,0 +1,50 @@
+<flynt-component name="BlockTestimonials">
+  <div class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What our students say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        {% set testimonials = [
+          {
+            text: "I've tried several apps, but StringMaster's interactive fretboard finally made chord transitions click for me. Went from zero to playing songs in 3 months!",
+            name: 'Alex Thompson',
+            title: 'Beginner, 4 months',
+            image: 'images/alex-student.jpg',
+          },
+          {
+            text: "The AI feedback feature is incredible. It's like having a personal instructor available 24/7. My fingerpicking has improved dramatically.",
+            name: 'Maria Garcia',
+            title: 'Intermediate, 1 year',
+            image: 'images/maria-student.jpg',
+          },
+          {
+            text: "Worth every penny. The song library keeps me motivated, and the progress tracking shows exactly how far I've come. Highly recommend!",
+            name: 'David Kim',
+            title: 'Pro subscriber, 8 months',
+            image: 'images/david-student.jpg',
+          },
+        ] %}
+
+        {% for testimonial in testimonials %}
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"{{ testimonial.text }}"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}">
+              </div>
+              <div>
+                <div class="testimonial-name">{{ testimonial.name }}</div>
+                <div class="testimonial-title">{{ testimonial.title }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</flynt-component>

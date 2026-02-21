@@ -1,29 +1,25 @@
-:root,
-[data-theme="reset"] {
-  --color-accent: hsla(212, 100%, 45%, 1);
-  --color-background: hsla(0, 0%, 100%, 1);
-  --color-background-secondary: hsla(0, 0%, 19%, 0.08);
+:root {
+	--bg-dark: #0d0d0d;
+	--bg-card: #1a1a1a;
+	--bg-elevated: #242424;
+	--accent: #f59e0b;
+	--accent-light: #fbbf24;
+	--accent-dark: #d97706;
+	--text-primary: #fafafa;
+	--text-secondary: #a3a3a3;
+	--text-muted: #737373;
+	--border: #2e2e2e;
+}
+
+:root {
+  --color-accent: var(--accent);
+  --color-background: var(--bg-dark);
+  --color-background-secondary: var(--bg-elevated);
   --color-border: hsl(0, 0%, 90%);
   --color-border-secondary: hsl(0, 0%, 19%, 0.68);
   --color-text: hsl(0, 0%, 19%, 1);
   --color-text-muted: hsla(0, 0%, 19%, 0.8);
   --color-error: hsl(343, 98%, 46%);
-}
-
-[data-theme="light"] {
-  --color-background: hsl(212, 76%, 97%);
-  --color-text: hsla(212, 100%, 15%, 1);
-  --color-border: hsla(212, 100%, 15%, 0.7);
-  --color-border-secondary: var(--color-border);
-}
-
-[data-theme="dark"] {
-  --color-accent: hsla(79, 100%, 60%, 1);
-  --color-background: hsla(212, 100%, 15%, 1);
-  --color-background-secondary: hsl(228, 56%, 98%, 0.06);
-  --color-border-secondary: hsl(0, 0%, 90%, 0.68);
-  --color-text: hsla(0, 0%, 100%, 1);
-  --color-text-muted: hsl(0, 0%, 100%, 0.8);
 }
 
 $breakpoint-mobile-horizontal: 480px;

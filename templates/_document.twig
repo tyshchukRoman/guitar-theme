@@ -16,7 +16,6 @@
         <header class="mainHeader">
           {% block header %}
             {{ renderComponent('NavigationMain') }}
-            {{ renderComponent('NavigationBurger') }}
           {% endblock %}
         </header>
         <main id="mainContent" class="mainContent" aria-label="{{- theme.labels.mainContentAriaLabel|e -}}">
@@ -28,11 +27,9 @@
             {% endblock %}
           {% endif %}
         </main>
-        <footer class="mainFooter">
-          {% block footer %}
-            {{ renderComponent('NavigationFooter') }}
-          {% endblock %}
-        </footer>
+        {% block footer %}
+          {{ renderComponent('NavigationFooter') }}
+        {% endblock %}
       </div>
     {% endblock %}
     <div class="wpFooter">

@@ -1,26 +1,73 @@
 flynt-component[name='NavigationFooter'] {
-  font-size: var(--font-size-body-small);
-
-  .container {
-    padding-block: var(--component-spacing);
-    text-align: center;
-
-    @media (min-width: $breakpoint-tablet) {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      padding-block: 36px;
-    }
+  footer {
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid var(--border);
   }
 
-  .content {
-    margin-block: var(--flow-space) 0;
-    margin-inline: 0;
-
-    @media (min-width: $breakpoint-tablet) {
-      margin: 0;
-    }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  @import 'Partials/menu';
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    max-width: 280px;
+  }
+
+  .footer-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .footer-bottom a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-bottom a:hover {
+    color: var(--accent-light);
+  }
 }
