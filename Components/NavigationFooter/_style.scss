@@ -1,73 +1,71 @@
-flynt-component[name='NavigationFooter'] {
-  footer {
-    padding: 4rem 2rem 2rem;
-    border-top: 1px solid var(--border);
-  }
+footer {
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid var(--border);
+}
 
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-  }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
 
-  .footer-brand p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    max-width: 280px;
-  }
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  max-width: 280px;
+}
 
-  .footer-title {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
-  }
+.footer-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
 
-  .footer-links {
-    list-style: none;
-  }
+.footer-links {
+  list-style: none;
+}
 
-  .footer-links li {
-    margin-bottom: 0.75rem;
-  }
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
 
-  .footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-  }
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
 
-  .footer-links a:hover {
-    color: var(--accent);
-  }
+.footer-links a:hover {
+  color: var(--accent);
+}
 
-  .footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-  }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
 
-  .footer-bottom a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
+.footer-bottom a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
-  .footer-bottom a:hover {
-    color: var(--accent-light);
-  }
+.footer-bottom a:hover {
+  color: var(--accent-light);
 }
