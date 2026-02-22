@@ -18,7 +18,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                     Components\BlockHomeHero\getACFLayout(),
                     Components\BlockFeatures\getACFLayout(),
                     Components\BlockPricing\getACFLayout(),
-                    Components\BlockInstructions\getACFLayout(),
+                    Components\BlockInstructors\getACFLayout(),
                     Components\BlockTestimonials\getACFLayout(),
                     Components\BlockCta\getACFLayout(),
                     Components\BlockAnchor\getACFLayout(),

@@ -1,0 +1,40 @@
+<flynt-component name="BlockInstructors" load:on="visible">
+  <div class="instructors" id="instructors">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Instructors</div>
+        <h2 class="section-title">Learn from the best</h2>
+        <p class="section-description">
+          Our instructors have decades of combined experience and a passion for teaching.
+        </p>
+      </div>
+
+      <div class="instructors-grid">
+        {% for instructor in instructors %}
+
+          {% set image = instructor.avatar %}
+
+          <div class="instructor-card">
+            <div class="instructor-image">
+              <img
+                class="lazyload"
+                src="{{ image.src|resizeDynamic(152) }}"
+                width="152"
+                height="{{ (152 / image.width * image.height)|round }}"
+                srcset="
+                  {{ image.src|resizeDynamic(152) }} 1x,
+                  {{ image.src|resizeDynamic(304) }} 2x"
+                data-sizes="152px"
+                alt="{{ image.alt|e }}"
+              >
+            </div>
+            <div class="instructor-name">{{ instructor.name }}</div>
+            <div class="instructor-role">{{ instructor.role }}</div>
+            <p class="instructor-bio">{{ instructor.bio }}</p>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</flynt-component>
